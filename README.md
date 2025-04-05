@@ -1,4 +1,4 @@
-About: The Age Calculator is a simple web application that allows users to calculate their age by entering their birth year and the current year.
+About: The Age Calculator is a simple web application that allows users to calculate their age in years,months and days by entering their birth date and the current date.
 
 Features:--
 1. User-friendly interface
