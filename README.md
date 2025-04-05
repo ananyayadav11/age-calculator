@@ -11,6 +11,8 @@ HTML – Structure of the webpage
 CSS – Styling and layout
 JavaScript – Logic for age calculation
 
-![image](https://github.com/user-attachments/assets/48272a18-7640-4932-b9d7-a5fc5f280680)
-![image](https://github.com/user-attachments/assets/dfdc8084-8f2e-4fa1-8c4f-86598b5a320c)
+![image](https://github.com/user-attachments/assets/d4413ce3-159d-475f-acfe-e38524114b49)
+![image](https://github.com/user-attachments/assets/59a8e7b9-83ec-421b-8f66-416ca2b7af98)
+
+
 
