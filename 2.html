@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator</title>
+    <link href="2.css" rel="stylesheet" >
+</head>
+<body>  
+      
+        <header>
+            <div id="header">
+                <div class="header-logo">
+                    <!--<img src="" width="100" height="100">-->
+                </div>
+                <div class="header-list"></div>
+                <nav class="header-list-nav">
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Sign in</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    
+        <main>
+            <section>
+             <div class="container">
+                <div class="text-section">
+                    <h1>Age Calculator</h1>
+                    <p>An Age Calculator is a tool that helps users determine their exact age based on their date of birth. </p>
+                    <p>It calculates age in years,months and days</p>
+                </div>
+    
+                <div class="laptop-container">
+                    <img src="./images/caladobe.png" alt="Laptop Image" class="laptop">
+                    <div class="block"></div>
+                </div>
+             </div>
+            </section>
+    
+            <section id="calculation">
+                <div id="input-container">
+                    <div id="screen">
+                      <img src="images/Add_a_little_bit_of_body_text__1_-removebg-preview.png" alt="image" >
+
+                      <div id="calculator">
+                        <label for="birth-date">Date of Birth:</label>
+                      <input type="date" id="birth-date"><br><br><br>
+                      <label for="current-date">Current Date:</label>
+                      <input type="date"  id="current-date"><br><br><br>
+                      <button onclick="calculateAge()">What is my Age?</button>
+                      <p id="result"></p>
+                    
+    
+                    
+    
+                    </div>
+                </div>
+    
+            </section>
+    
+        </main>
+    
+        <script>
+           /* function calculateAge(){
+    let birthDate= Number(document.getElementById("birth-year").value);
+    let currentYear= Number(document.getElementById("current-year").value);
+    let ageCalculator = currentYear-birthDate;
+    if(!birthDate || !currentYear || birthDate > currentYear) {
+            document.getElementById("result").innerText = "Please enter a valid year.";
+            return;
+    }
+        document.getElementById("result").innerText=`Age: ${ageCalculator}`;
+    }*/
+    
+function calculateAge() {
+    const birthInput = document.getElementById("birth-date").value;
+    const currentInput = document.getElementById("current-date").value;
+
+    if (!birthInput || !currentInput) {
+        document.getElementById("result").innerText = "Please enter both dates.";
+        return;
+    }
+
+    const birthDate = new Date(birthInput);
+    const currentDate = new Date(currentInput);
+
+    if (birthDate > currentDate) {
+        document.getElementById("result").innerText = "Birth date cannot be after current date.";
+        return;
+    }
+
+    let years = currentDate.getFullYear() - birthDate.getFullYear();
+    let months = currentDate.getMonth() - birthDate.getMonth();
+    let days = currentDate.getDate() - birthDate.getDate();
+
+    if (days < 0) {
+        months--;
+        const prevMonth = new Date(currentDate.getFullYear(), currentDate.getMonth(), 0);
+        days += prevMonth.getDate();
+    }
+
+    if (months < 0) {
+        years--;
+        months += 12;
+    }
+
+    document.getElementById("result").innerText =
+        `Your Age is: ${years} years, ${months} months, and ${days} days.`;
+}
+
+
+        </script>
+         
+</body>
+</html>

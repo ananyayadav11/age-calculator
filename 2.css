@@ -1,0 +1,158 @@
+body {
+    background: linear-gradient(to right, rgba(113, 145, 145, 1) 30%, rgba(223, 239, 242, 1) 30%);
+    height: 100vh;
+    margin: 0;
+    /*overflow: hidden;*/
+    
+    font-family: Arial, sans-serif;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding-top: 80px; /*prevents content from hiding behind the fixed header bar */
+}
+
+#header{
+ padding: 20px;
+ /*left:10px;
+ right:10px;*/
+ position: fixed;
+ top: 0;/*ensures its at the top*/
+ width: 100%;
+ background-color:rgba(223, 239, 242, 255);
+ align-items: center;
+ display: flex;
+ height: 70px;
+ justify-content: space-between;
+ z-index: 999;
+}
+.header-list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header-list-nav ul {
+    display: flex;
+  }
+  .header-list-nav ul li {
+    list-style-type: none;
+    padding: 0 20px;
+    position: relative;
+    justify-content: space-around;
+
+  }
+  .header-list-nav ul a:hover,
+.header-list-nav ul a:active {
+  color: #176560;
+  content: "";
+ 
+}
+
+.container{
+    position: relative; /* Add this */
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    width: 90%;
+    flex-direction: row-reverse; /* Swaps positions */
+    padding-bottom: 40px;
+}
+.text-section{
+    flex: 1; /* Allow text to take available space */
+    /*text-align: right; /* Align text to the right */
+    padding-right: 50px; /* Add spacing from the right */
+}
+.text-section h1{
+    color: black;
+    font-size: 80px;
+    width: 100%;
+    text-align: left;
+    font-family: sans-serif;
+    font-weight: bold;
+    padding-left: 0px;
+    text-align: right;
+}
+.text-section p{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding-left: 0px;
+    font-size:xx-large;
+    /*text-align: right;  Align paragraph text */
+
+
+}
+.laptop-container{
+    display: flex;
+    position: relative;
+    justify-content: flex-start; /* Changed from center */
+    align-items: flex-end;
+    width: 50%;
+    perspective: 1000px; /* Adds depth */
+    position: relative; /* Add this */
+    left: 0; /* Add this to align with the background partition */
+    transform: none; /* Add this to center on the partition*/
+}
+.laptop {
+    width: 80%; /* Adjust for size */
+    transform: rotateX(5deg) rotateY(5deg) rotateZ(3deg) translateY(5px);
+    filter: drop-shadow(20px 20px 10px rgba(0, 0, 0, 0.4));
+    padding-top: 320px;
+    padding-left: 70px;
+    width: 90%;  /* Increase the size */
+    height: auto; /* Maintain aspect ratio */
+
+}
+#calculation{
+    background-color: rgba(113, 145, 145, 1);
+    padding: 20px;
+  
+}
+#screen {
+    position: relative; /* Needed for absolute positioning of calculator */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#screen img{
+    
+    width:100%;
+    height:750px;
+}
+#calculator{
+    position: absolute; /* Place inside laptop */
+    top: 200px;  /* Move it down into the screen */
+    left: 420px;
+    width: 250px;
+    height: 300px;
+    border-radius:20px;
+    border: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+}
+#birth-year{
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+    width:  200px;
+}
+#current-year{
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+    width:  200px;
+}
+button{
+    padding:20px;
+    margin-bottom: 20px;
+    color: white;
+    background: #176560;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover{
+    color:darkblue ;
+}
+
+  
+
